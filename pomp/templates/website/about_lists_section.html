@@ -1,0 +1,16 @@
+<section class="about-lists">
+    <div class="container">
+
+      <div dir="rtl" class="row no-gutters">
+        {%  for i in obj_text %}
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+          <span>{{i.number}}</span>
+          <h4>{{i.head}}</h4>
+          <p>{{i.body}}</p>
+        </div>
+        {%  endfor %}
+
+      </div>
+
+    </div>
+  </section>

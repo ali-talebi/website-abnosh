@@ -1,0 +1,18 @@
+<form method="post" > 
+    {%  csrf_token %}
+
+    {{form.full_name}}
+
+    {{form.email}}
+
+    {{form.subject}}
+
+
+    {{form.message}}
+
+
+
+
+
+    <button type="submit">ارسال</button>
+</form>

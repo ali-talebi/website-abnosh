@@ -1,0 +1,37 @@
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>خدمات ما</h2>
+      </div>
+
+      <div class="row">
+
+        {%  for i in obj_services %}
+
+                
+
+        
+
+        
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+          <div class="icon"><i class= "{{i.type_service}}" ></i></div>
+          <h4 class="title"><a href="">{{i.name}}</a></h4>
+          <p class="description">{{i.description}}</p>
+          
+        </div>
+
+
+  
+
+        {%  empty %}
+          <h4> <center> درحال حاضر هیچ خدمتی در دست اقدام نمیباشد </center> </h4>
+
+        {%  endfor %}
+
+
+
+      </div>
+
+    </div>
+  </section>

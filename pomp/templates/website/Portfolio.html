@@ -1,0 +1,68 @@
+<section id="portfolio" class="portfolio section-bg">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="section-title">
+        <h2>پروژه و محصولات ما </h2>
+        <p>پروژه ها و محصولات شرکت آبنوش قابل مشاهده میباشد </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">همه</li>
+            <li data-filter=".filter-app">تابلو </li>
+            <li data-filter=".filter-card">پمپ آب</li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+      {%  for i in obj %}
+        <div class="{{i.type_product}}">
+          <div class="portfolio-wrap">
+            <img width = "50%" height = "auto" src="{{i.picture.url}}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{i.name}}</h4>
+
+              <p>
+                {%  if i.type_product == "col-lg-4 col-md-6 portfolio-item filter-app" %}
+                  <p> تابلو </p>
+
+
+                {%  else  %}
+
+                  <p> پمپ </p>
+              
+              
+                {%  endif %}
+              </p>
+              <div class="portfolio-links">
+                <a href="{{i.picture.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                <a href="{{i.get_absolute_url}}" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+  </section>
